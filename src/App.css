@@ -1,4 +1,116 @@
-.center {
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap");
+
+body {
+    background-image: url("./assets/main-bg.jpg");
+    font-family: "Quicksand", sans-serif;
+    font-size: 18px;
+}
+
+.main__section {
+    background-color: rgba(255, 255, 255, 0.7);
+    margin: 100px auto auto auto;
+}
+
+.main__section,
+.error,
+.welcome__div {
+    width: 85%;
+    max-width: 600px;
     text-align: center;
-    margin-top: 100px;
+    padding: 30px 10px;
+    border-radius: 5px;
+}
+
+.error,
+.welcome__div {
+    margin: 50px auto auto auto;
+    position: relative;
+    color: white;
+    font-weight: 500;
+    animation: show 1s;
+}
+@keyframes show {
+    0% {
+        transform: scale(0.5);
+    }
+    50% {
+        transform: scale(1);
+    }
+    90% {
+        transform: scale(0.9);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.error {
+    background-color: rgba(162, 57, 57, 0.8);
+}
+
+.welcome__div {
+    background-color: rgba(63, 146, 63, 0.8);
+}
+
+.input__style {
+    font-family: "Quicksand", sans-serif;
+    font-size: 18px;
+    width: 85%;
+    max-width: 500px;
+    margin: 10px auto;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    border-left: 2px solid grey;
+    border-bottom: 1px solid rgb(151, 151, 151);
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 10px 5px;
+    transition: 0.3s;
+}
+
+.input__style:focus {
+    outline: none;
+    border-left: 2px solid #fe3afe;
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+.button__style {
+    font-family: "Quicksand", sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    color: white;
+    width: 85%;
+    max-width: 500px;
+    margin: auto;
+    border: none;
+    border-radius: 10px;
+    background-image: linear-gradient(
+        to right,
+        #faa236 0%,
+        #ff4eb0 51%,
+        #faa236 100%
+    );
+    padding: 15px 10px;
+    transition: 0.5s;
+    background-size: 200% auto;
+    box-shadow: 1px 1px 20px grey;
+}
+
+.button__style:hover {
+    background-position: right center;
+}
+
+.button__style:active {
+    transform: scale(0.9);
+}
+
+.error::before {
+    content: "";
+    width: 0;
+    height: 0;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-bottom: 30px solid rgba(162, 57, 57, 0.8);
+    position: absolute;
+    top: -30px;
 }

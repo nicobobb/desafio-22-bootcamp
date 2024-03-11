@@ -28,13 +28,14 @@ function App() {
     };
     return (
         <>
-            <div className="center">
+            <div className="main__section">
                 <form onSubmit={(e) => handleSubmit(e)}>
                     <div>
                         <input
                             id="name"
                             type="text"
                             placeholder="Tu nombre es..."
+                            className="input__style"
                             required
                         />
                     </div>
@@ -43,10 +44,13 @@ function App() {
                             id="age"
                             type="number"
                             placeholder="Tu edad es..."
+                            className="input__style"
                             required
                         />
                     </div>
-                    <button type="submit">Enviar</button>
+                    <button type="submit" className="button__style">
+                        Enviar
+                    </button>
                 </form>
             </div>
 
